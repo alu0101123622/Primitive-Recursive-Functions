@@ -1,0 +1,4 @@
+*.o
+FPR
+.depend
+.vscode
