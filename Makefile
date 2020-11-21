@@ -4,15 +4,15 @@ RM=rm -f
 CFLAGS=-g -O2
 LDFLAGS=-g -O2
 
-SRC_SRS1= main.cpp 
+SRC_SRS1= main.cpp src/fpr.cpp src/addition-fpr.cpp
 SRC_SRS = $(SRC_SRS1) 
 
 SRCS=src/$(SRC_SRS) 
 OBJS=$(subst .cpp,.o,$(SRCS))
-all: TM
+all: FPR
 
-TM: $(OBJS)
-	$(CXX) $(LDFLAGS) -o TM $(OBJS) 
+FPR: $(OBJS)
+	$(CXX) $(LDFLAGS) -o FPR $(OBJS) 
 
 depend: .depend
 

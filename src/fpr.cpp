@@ -20,7 +20,7 @@ int FPR::proyection(int index, std::vector<int> arguments)
   return arguments[index];
 }
 
-int FPR::succesor(int arg)
+int FPR::successor(int arg)
 {
   return (arg + 1);
 }

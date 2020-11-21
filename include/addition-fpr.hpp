@@ -19,4 +19,5 @@ class additionFPR : public FPR
 public:
   int limitEquation(int arg);
   int recursionEquation(int firstArg, int secondArg);
+  int solve(int firstArg, int secondArg);
 };

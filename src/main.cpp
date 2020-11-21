@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <vector>
+#include "../include/addition-fpr.hpp"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ int main(int argc, char **argv)
     return 0;
   }
 
+  additionFPR Suma;
+  cout << Suma.solve(1,2) << endl;
 }
 
 bool proccessInputParameters(int argc, char **argv)
@@ -46,13 +49,13 @@ bool proccessInputParameters(int argc, char **argv)
             "Pruebe './FPR --help' (o -h) para más informacion\n";
     return 0;
   }
-  if (argc == 3)
-  {
-    arg2 = argv[2];
-    if (arg2 != "-s" && arg2 != "-f")
-    {
-      return -1;
-    }
-  }
+  // if (argc == 3)
+  // {
+  //   arg2 = argv[2];
+  //   if (arg2 != "-s" && arg2 != "-f")
+  //   {
+  //     return -1;
+  //   }
+  // }
   return 1;
 }

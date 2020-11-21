@@ -15,11 +15,12 @@
 class FPR
 {
 public:
-  virtual int limitEquation() = 0;
-  virtual int recursionEquation() = 0;
+  virtual int limitEquation(int arg) = 0;
+  virtual int recursionEquation(int firstArg, int secondArg) = 0;
+  virtual int solve(int firstArg, int secondArg) = 0;
 
   // Initical functions
   static int null(int arg);
-  static int succesor(int arg);
+  static int successor(int arg);
   static int proyection(int index, std::vector<int> arguments);
 };
