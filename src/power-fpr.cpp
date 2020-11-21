@@ -8,15 +8,16 @@
 // Correo: alu0101123622@ull.es
 // Fecha: 20/11/2020
 
+#include "../include/power-fpr.hpp"
+#include "../include/product-fpr.hpp"
 #include "../include/addition-fpr.hpp"
 
-int additionFPR::limitEquation(int arg)
+int powerFPR::limitEquation(int arg)
 {
-    std::vector<int> proyectionArray{arg};
-    return (FPR::proyection(0, proyectionArray));
+    return FPR::successor(FPR::null(arg));
 }
 
-int additionFPR::recursionEquation(int firstArg, int secondArg)
+int powerFPR::recursionEquation(int firstArg, int secondArg)
 {
   if (secondArg == 0)
   {
@@ -26,11 +27,12 @@ int additionFPR::recursionEquation(int firstArg, int secondArg)
   else
   {
     std::vector<int> proyectionArray{firstArg, secondArg--, recursionEquation(firstArg, secondArg--)};
-    return FPR::successor(FPR::proyection(2, proyectionArray));
+    productFPR product;
+    return product.solve(FPR::proyection(0, proyectionArray), FPR::proyection(2, proyectionArray));
   }
 }
 
-int additionFPR::solve(int firstArg, int secondArg)
+int powerFPR::solve(int firstArg, int secondArg)
 {
   return recursionEquation(firstArg, secondArg);
 }
